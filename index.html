@@ -86,31 +86,13 @@
       <input type="checkbox" id="debugMode"> 显示调试面板
     </label>
     <div id="debugPanel" style="display: none;">
+      <div id="parameterControls" class="parameter-controls"></div>
       <div class="waveform-container">
         <canvas id="waveform"></canvas>
       </div>
-      <div class="controls-container">
-        <div class="slider-container">
-          <label for="silenceThreshold">静音阈值: <span id="silenceThresholdValue">0.01</span></label>
-          <input type="range" id="silenceThreshold" min="0" max="0.1" step="0.001" value="0.01">
-        </div>
-        <div class="slider-container">
-          <label for="minSyllableDuration">最短音节持续时间: <span id="minSyllableDurationValue">30</span>ms</label>
-          <input type="range" id="minSyllableDuration" min="5" max="100" step="5" value="30">
-        </div>
-        <div class="slider-container">
-          <label for="maxSyllableDuration">最长音节持续时间: <span id="maxSyllableDurationValue">1000</span>ms</label>
-          <input type="range" id="maxSyllableDuration" min="500" max="2000" step="100" value="1000">
-        </div>
-        <div class="slider-container">
-          <label for="mfccThreshold">MFCC 阈值: <span id="mfccThresholdValue">1</span></label>
-          <input type="range" id="mfccThreshold" min="0.1" max="5" step="0.1" value="1">
-        </div>
-      </div>
-      <div class="info-container">
-        <p>当前 MFCC 值: <span id="currentMfcc"></span></p>
-        <p>MFCC 差异: <span id="mfccDifference"></span></p>
-      </div>
+      <div id="noiseProfile"></div>
+      <div id="currentFeatures"></div>
+      <div id="debugInfo"></div>
     </div>
   </div>
 
